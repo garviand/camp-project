@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/camp-project/static/css/main.db6d58db.chunk.css",
-    "main.js": "/camp-project/static/js/main.fdc784a4.chunk.js",
-    "main.js.map": "/camp-project/static/js/main.fdc784a4.chunk.js.map",
+    "main.css": "/camp-project/static/css/main.bbb3e541.chunk.css",
+    "main.js": "/camp-project/static/js/main.bd108250.chunk.js",
+    "main.js.map": "/camp-project/static/js/main.bd108250.chunk.js.map",
     "runtime~main.js": "/camp-project/static/js/runtime~main.9a488948.js",
     "runtime~main.js.map": "/camp-project/static/js/runtime~main.9a488948.js.map",
     "static/js/2.4e81ba5b.chunk.js": "/camp-project/static/js/2.4e81ba5b.chunk.js",
     "static/js/2.4e81ba5b.chunk.js.map": "/camp-project/static/js/2.4e81ba5b.chunk.js.map",
     "index.html": "/camp-project/index.html",
-    "precache-manifest.0756529ae2c29fc31695058486be1eb5.js": "/camp-project/precache-manifest.0756529ae2c29fc31695058486be1eb5.js",
+    "precache-manifest.caef8c0796c3ecd23882c08d6a8f692d.js": "/camp-project/precache-manifest.caef8c0796c3ecd23882c08d6a8f692d.js",
     "service-worker.js": "/camp-project/service-worker.js",
-    "static/css/main.db6d58db.chunk.css.map": "/camp-project/static/css/main.db6d58db.chunk.css.map"
+    "static/css/main.bbb3e541.chunk.css.map": "/camp-project/static/css/main.bbb3e541.chunk.css.map"
   }
 }
