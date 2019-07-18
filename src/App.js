@@ -39,6 +39,7 @@ class App extends React.Component {
         limit: 100
       }
       Utils.get(url, params, (response) => {
+        console.log(response);
         this.setState({
           contacts: response.contacts
         }, () => {
