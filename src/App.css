@@ -1,3 +1,53 @@
 .app {
   margin: 50px;
 }
+
+.contact_table {
+  width: 100%;
+  text-align: left;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: 1px solid #E4E7F0;
+}
+
+.contact_table-header {
+  height: 28px;
+  color: #5F667E;
+  border-bottom: 1px solid #E4E7F0;
+  font-size: 12px;
+}
+
+.contact_table-header th {
+  padding: 0 12px;
+  font-weight: 500;
+}
+
+.contact_table-row {
+  height: 46px;
+  border-bottom: 1px solid #E4E7F0;
+}
+
+.contact_table-row:nth-child(even) {
+  background-color: #FAFBFF;
+}
+
+.contact_table-row td {
+  padding: 0 12px;
+}
+
+.contact_table-cell-centered {
+  text-align: center;
+}
+
+.contact_table-cell-name {
+  color: #356AE6;
+  font-weight: 500;
+}
+
+.contact_table-cell-location {
+  min-width: 100px;
+}
+
+.contact_table-cell-tags {
+  max-width: 400px;
+}

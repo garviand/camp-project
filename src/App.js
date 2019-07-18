@@ -19,6 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    // Sequentially load and compile all data, then set loaded to true
     this.fetchContacts()
     .then(this.compileDeals)
     .then(this.compileLocations)
@@ -39,8 +40,7 @@ class App extends React.Component {
       }
       Utils.get(url, params, (response) => {
         this.setState({
-          contacts: response.contacts,
-          tags: response.tags
+          contacts: response.contacts
         }, () => {
           resolve(response);
         });
@@ -123,15 +123,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <table>
-          <tbody>
-            <tr>
+        <table className="contact_table">
+          <thead>
+            <tr className="contact_table-header">
               <th>Contact</th>
               <th>Total Value</th>
               <th>Location</th>
-              <th>Deals</th>
+              <th className="contact_table-cell-centered">Deals</th>
               <th>Tags</th>
             </tr>
+          </thead>
+          <tbody>
             {this.state.dataLoaded &&
               this.state.contacts.map((contact) => {
                 var value = 0;
@@ -155,12 +157,12 @@ class App extends React.Component {
                   tags = this.state.tags[contact.id].join(', ')
                 }
                 return (
-                  <tr key={contact.email}>
-                    <td>{contact.firstName} {contact.lastName}</td>
-                    <td>${value}</td>
-                    <td>{location}</td>
-                    <td>{deals}</td>
-                    <td>{tags}</td>
+                  <tr key={contact.email} className="contact_table-row">
+                    <td className="contact_table-cell-name">{contact.firstName} {contact.lastName}</td>
+                    <td>${value.toLocaleString()}</td>
+                    <td className="contact_table-cell-location">{location}</td>
+                    <td className="contact_table-cell-centered">{deals}</td>
+                    <td className="contact_table-cell-tags">{tags}</td>
                   </tr>
                 );
               })
