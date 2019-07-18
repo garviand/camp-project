@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c1cbafd6960ab09431cbb4234c7af13a",
+    "revision": "4cafef24e62a71183379d98d1f4c485c",
     "url": "/camp-project/index.html"
   },
   {
-    "revision": "3ef4b6ae9df2f1afd03d",
+    "revision": "13c63cc3fc83996b663a",
     "url": "/camp-project/static/css/main.bbb3e541.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/camp-project/static/js/2.4e81ba5b.chunk.js"
   },
   {
-    "revision": "3ef4b6ae9df2f1afd03d",
-    "url": "/camp-project/static/js/main.efd171ba.chunk.js"
+    "revision": "13c63cc3fc83996b663a",
+    "url": "/camp-project/static/js/main.fc49e33b.chunk.js"
   },
   {
     "revision": "0f47d625d99c2e8392ea",
