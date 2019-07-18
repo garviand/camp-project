@@ -33,13 +33,12 @@ class App extends React.Component {
 
   fetchContacts() {
     return new Promise((resolve, reject) => {
-      var url = 'https://lamppoststudios.api-us1.com/api/3/contacts';
-      var params = {
+      const url = 'https://lamppoststudios.api-us1.com/api/3/contacts';
+      const params = {
         include: 'contactTags.tag,deals,contactData',
         limit: 100
       }
       Utils.get(url, params, (response) => {
-        console.log(response);
         this.setState({
           contacts: response.contacts
         }, () => {
@@ -51,7 +50,7 @@ class App extends React.Component {
 
   compileDeals(response) {
     return new Promise((resolve, reject) => {
-      var deals = {}
+      let deals = {}
       response.deals.forEach((deal) => {
         // If contact deals object doesn't exist, create
         if (!(deal.contact in deals)) {
@@ -74,7 +73,7 @@ class App extends React.Component {
 
   compileLocations(response) {
     return new Promise((resolve, reject) => {
-      var locations = {}
+      let locations = {}
       response.contactData.forEach((data) => {
         // If contact locations object doesn't exist, create
         if (!(data.contact in locations)) {
@@ -96,7 +95,7 @@ class App extends React.Component {
   compileTags(response) {
     return new Promise((resolve, reject) => {
       // First, compile tags by id
-      var tags = {}
+      let tags = {}
       response.tags.forEach((tag) => {
         // If tag object doesn't exist, create
         if (!(tag.id in tags)) {
@@ -104,7 +103,7 @@ class App extends React.Component {
         }
       });
       // Next, add mappings to specific contacts
-      var mappings = {}
+      let mappings = {}
       response.contactTags.forEach((contactTag) => {
         // If mapping object doesn't exist, create
         if (!(contactTag.contact in mappings)) {
@@ -137,23 +136,23 @@ class App extends React.Component {
           <tbody>
             {this.state.dataLoaded &&
               this.state.contacts.map((contact) => {
-                var value = 0;
-                var deals = 0;
+                let value = 0;
+                let deals = 0;
                 if (contact.id in this.state.deals) {
                   value = this.state.deals[contact.id].value
                   deals = this.state.deals[contact.id].count
                 }
-                var location = '';
+                let location = '';
                 if (contact.id in this.state.locations) {
-                  var _location = this.state.locations[contact.id]
-                  var locationSegments = ['city', 'state', 'country'].filter(function(field) {
+                  let _location = this.state.locations[contact.id]
+                  let locationSegments = ['city', 'state', 'country'].filter(function(field) {
                     return _location[field].trim().length > 0;
                   }).map(function(field) {
                     return _location[field];
                   })
                   location = locationSegments.join(', ')
                 }
-                var tags = '';
+                let tags = '';
                 if (contact.id in this.state.tags) {
                   tags = this.state.tags[contact.id].join(', ')
                 }

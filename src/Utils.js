@@ -1,9 +1,9 @@
 import Config from './Config';
 
-var Utils = {
+const Utils = {
   
   get: function(url, params, cb) {
-    var xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
       if (xhr.readyState === XMLHttpRequest.DONE) {
         if (xhr.statusText !== 'OK') {
@@ -13,11 +13,11 @@ var Utils = {
         cb(JSON.parse(xhr.responseText));
       }
     }
-    var paramList = Object.keys(params).map(function(key){
-      var param = params[key];
+    let paramList = Object.keys(params).map(function(key){
+      let param = params[key];
       return key + '=' + param
     });
-    var _params = ''
+    let _params = ''
     if (paramList.length > 0) {
       _params = '?' + paramList.join('&')
     }
